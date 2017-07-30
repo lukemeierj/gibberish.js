@@ -51,7 +51,7 @@ var Gibberish = {
     },
 
     isGibberish: function(l) {
-        return this.avgTransitionProb(l) > this.data['thresh'];
+        return this.avgTransitionProb(l) <= this.data['thresh'];
     },
 
     nGram: function*(n, l){
