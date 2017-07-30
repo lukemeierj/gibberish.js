@@ -15,6 +15,6 @@ console.log(Gibberish.isGibberish(';sdfkhgas')) // => true
 ```
 To change the threshold for what is classified as gibberish and what is not, modify the matrix object.
 ```javascript
-Gibberish.matrix['tresh'] = 0.04; // default
-Gibberish.matrix['tresh'] = 0.02; // the threshold chosen by Neuhaus' method
-Gibberish.matrix['tresh'] = 0.06; // fairly strict, more likely to misclassify valid strings 
+Gibberish.matrix['thresh'] = 0.04; // default
+Gibberish.matrix['thresh'] = 0.02; // the threshold chosen by Neuhaus' method
+Gibberish.matrix['thresh'] = 0.06; // fairly strict, more likely to misclassify valid strings 
