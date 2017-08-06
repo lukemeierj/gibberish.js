@@ -64,8 +64,9 @@ var Gibberish = {
     normalize: function(line){
         var acceptedChars = this.acceptedChars;
         return line.split('').reduce(function(filtered, c) {
+            c = c.toLowerCase();
             if(acceptedChars.indexOf(c) >= 0){
-                filtered.push(c.toLowerCase());
+                filtered.push(c);
             }
             return filtered;
         }, []);
