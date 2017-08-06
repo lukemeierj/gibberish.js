@@ -41,12 +41,12 @@ var Gibberish = {
         var logProb = 0, transitionCt = 0;
         var gram = this.nGram(2, l);
         var parts = gram.next();
-        do {
+        while(!parts.done){
             var a = parts.value[0], b = parts.value[1];
             logProb += this.data['mat'][this.pos[a]][this.pos[b]]
             transitionCt += 1
             parts = gram.next();
-        } while(!parts.done)
+        } 
         return Math.exp(logProb / (transitionCt || 1))
     },
 
